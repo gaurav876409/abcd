@@ -1,0 +1,133 @@
+
+.white-cell {
+    background-color: white;
+    color: black;
+}
+
+.green-cell {
+    background-color: green;
+    color: white;
+}
+
+.blur{
+    color: #ccc;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.container_head{
+    display: flex;
+    margin-bottom: 20px;
+    width: 400px;
+    justify-content: space-around;
+}
+.container_footer{
+    display: flex;
+    margin-top: 20px;
+    width: 400px;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Style for the container */
+.container_month {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; 
+  }
+  #month {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; 
+    background-color: #fff;
+    color: #333;
+    outline: none; 
+  }
+.container_year {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; 
+  }
+  #year {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%; 
+    background-color: #fff;
+    color: #333;
+    outline: none; 
+  }
+  
+  .container_input input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; 
+    background-color: #fff;
+    color: #333;
+    outline: none; 
+    margin-right: 10px; 
+  }
+  
+  .container_button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.container_main {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #calendar {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Style for table header (thead) */
+  #calendar thead {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  #calendar th {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style for table cells (td) in the tbody */
+  #calendar td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  /* Style for blurred cells */
+  #calendar td.blur {
+    color: #ccc;
+  }
+  
+  /* Style for cells with a green background */
+  #calendar td.green-cell {
+    background-color: green;
+    color: white;
+  }
+  
