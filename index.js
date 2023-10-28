@@ -8,16 +8,15 @@ for (let year = 1990; year <= 2030; year++) {
     yearSelect.appendChild(option);
   }
 
-// Function to generate the calendar
 function generateCalendar(month, year) {
-  const daysInMonth = new Date(year, month + 1, 0).getDate(); // Get the number of days in the selected month
-  const firstDay = new Date(year, month, 1).getDay(); // Get the day of the week of the first day
+  const daysInMonth = new Date(year, month + 1, 0).getDate(); 
+  const firstDay = new Date(year, month, 1).getDay(); 
 
-  calendarBody.innerHTML = ""; // Clear the calendar body
+  calendarBody.innerHTML = ""; 
 
   let date = 1;
 
-let prevMonthDays = new Date(year, month, 0).getDate(); // Get the number of days in the previous month
+let prevMonthDays = new Date(year, month, 0).getDate(); 
 
   for (let i = 0; i < 6; i++) {
     const row = calendarBody.insertRow();
@@ -25,18 +24,16 @@ let prevMonthDays = new Date(year, month, 0).getDate(); // Get the number of day
       const cell = row.insertCell();
 
       if (i === 0 && j < firstDay) {
-        // Fill empty cells before the first day of the month
         cell.textContent = prevMonthDays - firstDay + j + 1;
-        cell.classList.add("blur"); // Add a CSS class for blurred cells
+        cell.classList.add("blur"); 
         cell.classList.add("white-cell");
       } else if (date <= daysInMonth) {
         cell.textContent = date;
         cell.classList.add("white-cell");
         date++;
       } else {
-        // Display dates from the next month
         cell.textContent = date - daysInMonth;
-        cell.classList.add("blur"); // Add a CSS class for blurred cells
+        cell.classList.add("blur"); 
         cell.classList.add("white-cell");
         date++;
       }
@@ -44,10 +41,8 @@ let prevMonthDays = new Date(year, month, 0).getDate(); // Get the number of day
   }
 }
 
-// Initial calendar generation
-generateCalendar(0, 1990); // You can set default values
+generateCalendar(0, 1990); 
 
-// Event listener for month and year selection
 monthSelect.addEventListener("change", function () {
   const selectedMonth = parseInt(monthSelect.value);
   const selectedYear = parseInt(yearSelect.value);
@@ -55,7 +50,6 @@ monthSelect.addEventListener("change", function () {
       generateCalendar(selectedMonth, selectedYear);
   }
 });
-// Event listener for year selection
 yearSelect.addEventListener("change", function () {
     const selectedMonth = parseInt(monthSelect.value);
     const selectedYear = parseInt(yearSelect.value);
